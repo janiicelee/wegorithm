@@ -1,16 +1,12 @@
-def d(n):
-    a = 0
-    for x in list(str(n)):
-        a = a + int(x)
-    return int(n) + a
+natural_number_set = set(range(1, 10001))
+generated_number_set= set()
 
-a = []
-for i in range(1,10001):
-    k = d(i)
-    a.append(k)
+for i in range(1, 10001):
+    for j in str(i):
+        i += int(j)
+    generated_number_set.add(i)
 
-for b in range(1, 10001):
-    if b in a:
-        pass
-    else:
-        print(b)
+self_number_set = natural_number_set - generated_number_set
+
+for i in sorted(self_number_set):
+    print(i)
