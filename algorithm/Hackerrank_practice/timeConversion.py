@@ -15,3 +15,4 @@ def timeConversion(s):
             output = str(int(hh) + 12) + s[2:-2]
 
     return output
+
